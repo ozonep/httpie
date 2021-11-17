@@ -1,5 +1,6 @@
 // Import Third-party Dependencies
 import is from "@slimio/is";
+import { URL } from "url";
 
 // Import Internal Dependencies
 import { windev } from "./helpers";

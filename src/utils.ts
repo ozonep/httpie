@@ -1,12 +1,8 @@
-/* eslint-disable no-redeclare */
-
 // Import Node.js Dependencies
 import { IncomingHttpHeaders } from "http";
-
 // Import Third-party Dependencies
 import * as contentType from "content-type";
 import { Dispatcher } from "undici";
-
 // Import Internal Dependencies
 import { RequestResponse, ReqOptions } from "./request";
 
@@ -51,7 +47,7 @@ export async function parseUndiciResponse<T>(response: Dispatcher.ResponseData):
   try {
     return type === "application/json" ? JSON.parse(body) : body;
   }
-  catch (error) {
+  catch (error: any) {
     // Note: Even in case of an error we want to be able to recover the body that caused the JSON parsing error.
     error.body = body;
 

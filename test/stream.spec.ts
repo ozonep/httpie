@@ -1,5 +1,6 @@
 // Import Third-party Dependencies
 import { FastifyInstance } from "fastify";
+import { URL } from "url";
 
 // Import Node.js Dependencies
 import { createWriteStream, createReadStream, existsSync, promises as fs } from "fs";

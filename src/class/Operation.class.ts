@@ -1,9 +1,7 @@
 // Import Node.js Dependencies
 import { promisify } from "util";
-
 // Import Internal Dependencies
 import { RetryOptions } from "../retry";
-
 // VARS
 const setTimeoutAysnc = promisify(setTimeout);
 
@@ -76,8 +74,6 @@ export default class Operation<T> {
     this.attempt++;
 
     if (this.attempt > this.retries) {
-      // TODO: add error causes ?
-
       throw new Error("Exceeded the maximum number of allowed retries!");
     }
 
@@ -93,7 +89,6 @@ export default class Operation<T> {
 
   success(data: T) {
     this.data = data;
-
     this.continueExecution = false;
     this.executionTimestamp = Date.now() - this.startAt;
   }

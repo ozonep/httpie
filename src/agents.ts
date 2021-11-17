@@ -1,6 +1,7 @@
 // Import Third-party Dependencies
 import { Agent } from "undici";
 import LRU from "lru-cache";
+import { URL } from "url";
 
 // Import Internal Dependencies
 import { InlineCallbackAction } from "./request";

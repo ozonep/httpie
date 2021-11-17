@@ -1,11 +1,10 @@
 // Import Node.js Dependencies
 import { IncomingHttpHeaders } from "http";
-
+import { URL } from "url";
 // Import Third-party Dependencies
 import * as undici from "undici";
 import { HttpMethod } from "undici/types/dispatcher";
 import status from "statuses";
-
 // Import Internal Dependencies
 import * as Utils from "./utils";
 import { computeURI } from "./agents";

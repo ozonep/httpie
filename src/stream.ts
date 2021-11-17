@@ -1,5 +1,6 @@
 // Import Node.js Dependencies
 import { Duplex, Writable } from "stream";
+import { URL } from "url";
 
 // Import Third-party Dependencies
 import * as undici from "undici";
